@@ -1,0 +1,12 @@
+
+<div class="row mt-5" *ngIf="GameService.deals">
+  <div class="col-3 mt-4" *ngFor="let deal of GameService.deals">
+    <div class="card rounded text-center h5 text-light bg-transparent">
+        <div class="image">
+      <img [src]="deal.thumb" class="card-img-top" alt="game-thumb" />
+    </div>
+      {{ deal.title }}
+      <button class="btn btn-warning" (click)="BasketService.addToBasket(deal)">add</button>
+    </div>
+  </div>
+</div>

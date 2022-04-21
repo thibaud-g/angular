@@ -1,0 +1,27 @@
+section{   
+ text-align: center;
+ h1{
+     font-size: 30px;
+ }
+ 
+    
+ }
+.buttons{
+    height: 3rem;
+    margin: 6px;
+    font-size: 20px;
+    background-color: rgb(225, 215, 250);
+    border: 3px solid black;
+    box-shadow: 3px 3px 3px black;
+    transition: 1s;
+}
+.buttons:hover{
+    transform: translateY(-20%);
+    transform: scale(110%);
+    transform-style: preserve-3d   ;
+    transition: 1s;
+}
+.red{
+    background-color: rgb(192, 8, 8);
+   
+}

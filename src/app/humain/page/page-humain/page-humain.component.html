@@ -1,0 +1,22 @@
+<section>
+<div class="addHumain" >
+    <h1>Ajouter des Hommes</h1>
+    <button class="buttons"  *ngFor="let humain of humains; let i = index" (click)="ajouterHumain(humain)">
+        Ajouter{{humain.icon}}
+    </button>
+  
+        
+        
+    
+    
+
+</div>
+<div class="listHumain">
+    <h1>Votre liste d'humain</h1>
+    <button class="buttons red" *ngFor="let humain of lists; let i = index" (click)="supprimerHumain(i)">
+          Supprimer{{humain.icon}} <br>
+        
+
+    </button>
+</div>
+</section>

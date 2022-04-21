@@ -1,0 +1,26 @@
+<section>
+    <div class="content">
+        <h1>
+            Todo List
+        </h1>
+        <hr>
+        <div>
+            <!-- Champ qui au changement modifie la varaible currentTodo -->
+            <input type="text" [(ngModel)]="currentTodo"> 
+            <!-- Button qui au Click, prend la variable currentTodo et l'ajoute à la todolist -->
+            <button (click)="addTodo(currentTodo)">Ajouter</button>
+        </div>
+        <hr>
+        <!-- Parcour nos Todos pour les créer de façon visuelle -->
+        <div *ngFor="let todo of todos; let i = index">
+            <!-- Champ qui au changement modifie la varaible todo -->
+           <input type="text" [(ngModel)]="todos[i].content" [value]="todo.content"> 
+           <!-- Button qui au Click, supprime la Todo -->
+           <button (click)="removeTodo(i)">X</button>            <!-- Champ qui au changement modifie la varaible todo -->
+        </div>
+        <hr>
+         <!-- Bouton qui au click, sauvegarde les todolist -->
+        <button (click)="sauvegarder()">Sauvegarder</button>
+    </div>
+</section>
+
